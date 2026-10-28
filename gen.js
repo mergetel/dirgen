@@ -1,6 +1,6 @@
 // The Directory Generator. One seed in, one SaaS directory that doesn't exist out.
 //
-// The page, the badge edge function and the daily workflow all import this file,
+// The page, the badge build script and the daily workflow all import this file,
 // so a seed means the same directory everywhere.
 //
 // FROZEN: every list marked FROZEN is read by index. Editing, reordering or
@@ -8,9 +8,10 @@
 // for. To stop a name from being generated, append it to BLOCKED_DIRECTORIES
 // or BLOCKED_TOOLS instead. `npm test` fails if a frozen list changes.
 
-// John is still buying domains. Change this one line when he does.
-export const SITE_URL = 'https://dirgen.netlify.app';
-export const SITE_HOST = new URL(SITE_URL).host;
+// John is still buying domains. Change this one line when he does, with no
+// trailing slash. GitHub Pages serves the repo under /dirgen until then.
+export const SITE_URL = 'https://mergetel.github.io/dirgen';
+export const SITE_LABEL = SITE_URL.replace(/^https?:\/\//, '');
 
 export const SMALL_PRINT = "a directory that doesn't exist";
 
@@ -159,6 +160,19 @@ export function directoryName(seed) {
     if (!isBlockedDirectory(name)) return name;
   }
   return 'Directoryopia';
+}
+
+// Every name directoryName() can return. There are only a few hundred, which
+// is why the badges can be static files on GitHub Pages.
+export function allDirectoryNames() {
+  const names = new Set(['Directoryopia']);
+  for (const p of DIR_PREFIX) {
+    for (const s of DIR_SUFFIX.concat(DIR_AGENT)) names.add(p + s);
+  }
+  for (const v of DIR_VERB) {
+    for (const t of DIR_TAIL) names.add(v + t);
+  }
+  return [...names].filter((n) => !isBlockedDirectory(n)).sort();
 }
 
 export function directoryTagline(seed) {
@@ -427,7 +441,8 @@ export function permalink(dir) {
   return `${SITE_URL}/#${p.toString()}`;
 }
 
-export const badgeUrl = (dir) => `${SITE_URL}/badge/${dir.code}.svg`;
+export const badgePath = (name) => `badge/${name.toLowerCase()}.svg`;
+export const badgeUrl = (dir) => `${SITE_URL}/${badgePath(dir.name)}`;
 
 export function ordinal(n) {
   const s = ['th', 'st', 'nd', 'rd'];
@@ -478,7 +493,7 @@ export function renderDirectory(dir, nowMs = Date.now()) {
       </li>`).join('');
 
   return `<div class="dg-site" data-vibe="${esc(dir.vibe)}" data-name="${esc(dir.name)}" data-queue="${dir.queue}">
-  <div class="dg-tell" role="note"><strong>This directory doesn't exist.</strong> It was generated in one click at <a href="${esc(SITE_URL)}">${esc(SITE_HOST)}</a>. Nothing here is for sale.</div>
+  <div class="dg-tell" role="note"><strong>This directory doesn't exist.</strong> It was generated in one click at <a href="${esc(SITE_URL)}">${esc(SITE_LABEL)}</a>. Nothing here is for sale.</div>
   <header class="dg-nav">
     <span class="dg-brand">${esc(dir.name)}</span>
     <nav aria-label="${esc(dir.name)}"><span>Browse</span><span>Categories</span><span>Newsletter</span></nav>
@@ -521,7 +536,7 @@ export function renderDirectory(dir, nowMs = Date.now()) {
   </section>
   <footer class="dg-foot">
     <span>© ${esc(dir.name)}. ${esc(SMALL_PRINT[0].toUpperCase() + SMALL_PRINT.slice(1))}.</span>
-    <span>No tools were reviewed. The count resets at midnight UTC. Made at <a href="${esc(permalink(dir))}">${esc(SITE_HOST)}</a>.</span>
+    <span>No tools were reviewed. The count resets at midnight UTC. Made at <a href="${esc(permalink(dir))}">${esc(SITE_LABEL)}</a>.</span>
   </footer>
 </div>`;
 }
@@ -581,7 +596,7 @@ export function exportHtml(dir, css, nowMs = Date.now()) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>${esc(title)}</title>
-<meta name="description" content="${esc(dir.name)} is a SaaS directory that doesn't exist. Generated at ${esc(SITE_HOST)}.">
+<meta name="description" content="${esc(dir.name)} is a SaaS directory that doesn't exist. Generated at ${esc(SITE_LABEL)}.">
 <style>
 body { margin: 0; }
 .dg-export-ribbon { position: fixed; z-index: 10; right: -52px; bottom: 34px; transform: rotate(-45deg); padding: 6px 60px; background: #e11d48; color: #fff; font: 800 13px/1.2 ui-sans-serif, system-ui, sans-serif; letter-spacing: .08em; pointer-events: none; }

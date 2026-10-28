@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="54" viewBox="0 0 250 54" role="img" aria-label="Featured on FounderPostr, a directory that doesn't exist">
+  <title>Featured on FounderPostr, a directory that doesn't exist</title>
+  <rect x="0.5" y="0.5" width="249" height="53" rx="9" fill="#14121f" stroke="#5b4fe0"/>
+  <circle cx="27" cy="27" r="17" fill="#5b4fe0"/>
+  <circle cx="27" cy="27" r="13" fill="none" stroke="#c7c2ff" stroke-width="1.5" stroke-dasharray="2 2"/>
+  <path d="M27 17.5l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3.1-5.8 3.1 1.1-6.5-4.7-4.6 6.5-.9z" fill="#fde047"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', Arial, sans-serif">
+    <text x="54" y="16" font-size="9" font-weight="700" letter-spacing="1.2" fill="#a8a2e8">FEATURED ON</text>
+    <text x="54" y="35" font-size="19" font-weight="800" fill="#ffffff">FounderPostr</text>
+    <text x="54" y="47.5" font-size="8.5" font-style="italic" fill="#fca5a5">a directory that doesn't exist</text>
+  </g>
+</svg>

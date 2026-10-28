@@ -1,8 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import * as G from '../gen.js';
-import badge from '../netlify/edge-functions/badge.js';
 
 const CSS = readFileSync(new URL('../site.css', import.meta.url), 'utf8');
 
@@ -117,13 +116,17 @@ test('the badge says the directory does not exist, inside the SVG', () => {
   assert.ok(G.badgeFontSize('BacklinkPalooza') * 15 * 0.66 <= 250 - 54 - 10);
 });
 
-test('the badge edge function serves a seed and 404s anything else', async () => {
-  const ok = await badge(new Request('https://x.test/badge/2a.svg'));
-  assert.equal(ok.status, 200);
-  assert.match(ok.headers.get('content-type'), /^image\/svg\+xml/);
-  assert.ok((await ok.text()).includes(G.directoryName(G.codeToSeed('2a'))));
-  for (const path of ['/badge/', '/badge/2a.png', '/badge/../gen.js', '/badge/ZZ.svg', '/badge/zzzzzzzz.svg']) {
-    assert.equal((await badge(new Request('https://x.test' + path))).status, 404, path);
+test('every name the generator can produce has a static badge, and nothing else does', () => {
+  const all = new Set(G.allDirectoryNames());
+  for (let i = 0; i < 40000; i++) {
+    const name = G.directoryName(Math.imul(i, 2654435761) >>> 0);
+    assert.ok(all.has(name), `${name} has no badge`);
+  }
+  const files = readdirSync(new URL('../badge/', import.meta.url)).sort();
+  assert.deepEqual(files, [...all].map((n) => G.badgePath(n).slice(6)).sort(), 'run npm run badges');
+  for (const name of all) {
+    const svg = readFileSync(new URL('../' + G.badgePath(name), import.meta.url), 'utf8');
+    assert.equal(svg, G.badgeSvg(name), `badge/${name.toLowerCase()}.svg is stale, run npm run badges`);
   }
 });
 
@@ -131,10 +134,11 @@ test('snippets link to the permalink and hotlink the badge', () => {
   const dir = G.generate(G.codeToSeed('abc'), { niche: 'marketing', vibe: 'cozy', tiers: 3 });
   const { html, markdown } = G.badgeSnippets(dir);
   const link = `${G.SITE_URL}/#s=abc&amp;niche=marketing&amp;vibe=cozy&amp;tiers=3`;
+  const img = `${G.SITE_URL}/badge/${dir.name.toLowerCase()}.svg`;
   assert.ok(html.includes(`href="${link}"`));
-  assert.ok(html.includes(`src="${G.SITE_URL}/badge/abc.svg"`));
+  assert.ok(html.includes(`src="${img}"`));
   assert.ok(html.includes(G.SMALL_PRINT));
-  assert.equal(markdown, `[![Featured on ${dir.name}, ${G.SMALL_PRINT}](${G.SITE_URL}/badge/abc.svg)](${G.SITE_URL}/#s=abc&niche=marketing&vibe=cozy&tiers=3)`);
+  assert.equal(markdown, `[![Featured on ${dir.name}, ${G.SMALL_PRINT}](${img})](${G.SITE_URL}/#s=abc&niche=marketing&vibe=cozy&tiers=3)`);
 });
 
 test('the rendered directory carries its tells and captures nothing', () => {

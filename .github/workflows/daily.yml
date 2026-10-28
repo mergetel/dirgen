@@ -1,7 +1,7 @@
 # Generates today's directory, opens a PR that adds it to data/generated.json,
-# and merges it. The seed is a hash of the date, so a rerun on the same day
-# finds nothing new and stops. Needs "Allow GitHub Actions to create and
-# approve pull requests" (Settings, Actions, General).
+# merges it, then redeploys GitHub Pages. The seed is a hash of the date, so a
+# rerun on the same day finds nothing new and stops. Needs "Allow GitHub
+# Actions to create and approve pull requests" (Settings, Actions, General).
 name: Today's directory
 
 on:
@@ -20,6 +20,8 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.gen.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
 
@@ -56,3 +58,12 @@ jobs:
             gh pr edit "$open_pr" --title "$TITLE" --body-file "$RUNNER_TEMP/pr-body.md"
           fi
           gh pr merge "$BRANCH" --squash --delete-branch --auto || gh pr merge "$BRANCH" --squash --delete-branch
+
+  deploy:
+    needs: generate
+    if: needs.generate.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
