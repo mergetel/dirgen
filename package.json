@@ -1,0 +1,13 @@
+{
+  "name": "directory-generator",
+  "private": true,
+  "type": "module",
+  "description": "A SaaS directory in one click. It doesn't exist.",
+  "scripts": {
+    "dev": "node scripts/serve.js",
+    "test": "node --test tests/*.test.js && node scripts/check.js",
+    "check": "node scripts/check.js",
+    "daily": "node scripts/daily.js"
+  },
+  "engines": { "node": ">=20" }
+}
