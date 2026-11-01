@@ -7,5 +7,14 @@
     "tiers": 4,
     "name": "NicheHuntr",
     "tagline": "Launch here, then launch everywhere else"
+  },
+  {
+    "date": "2026-11-01",
+    "seed": "4vf427",
+    "niche": "wrappers",
+    "vibe": "minimal",
+    "tiers": 2,
+    "name": "FounderDroppr",
+    "tagline": "Trusted by founders who submitted their own tool"
   }
 ]
