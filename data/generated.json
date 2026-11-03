@@ -25,5 +25,14 @@
     "tiers": 2,
     "name": "Backlinkpalooza",
     "tagline": "Find tools. Submit tools. Mostly submit tools."
+  },
+  {
+    "date": "2026-11-03",
+    "seed": "5febg5",
+    "niche": "wrappers",
+    "vibe": "minimal",
+    "tiers": 5,
+    "name": "ShipCrate",
+    "tagline": "Launch here, then launch everywhere else"
   }
 ]
