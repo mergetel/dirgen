@@ -34,5 +34,14 @@
     "tiers": 5,
     "name": "ShipCrate",
     "tagline": "Launch here, then launch everywhere else"
+  },
+  {
+    "date": "2026-11-04",
+    "seed": "3hh3lc",
+    "niche": "wrappers",
+    "vibe": "minimal",
+    "tiers": 5,
+    "name": "Boostium",
+    "tagline": "Where tools go to be listed"
   }
 ]
