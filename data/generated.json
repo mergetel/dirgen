@@ -43,5 +43,14 @@
     "tiers": 5,
     "name": "Boostium",
     "tagline": "Where tools go to be listed"
+  },
+  {
+    "date": "2026-11-05",
+    "seed": "3rgpab",
+    "niche": "productivity",
+    "vibe": "cozy",
+    "tiers": 3,
+    "name": "NichePile",
+    "tagline": "The only directory you need until the next one"
   }
 ]
