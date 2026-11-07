@@ -61,5 +61,14 @@
     "tiers": 3,
     "name": "Promoium",
     "tagline": "Built in a weekend. Listing since Sunday."
+  },
+  {
+    "date": "2026-11-07",
+    "seed": "4bfwo9",
+    "niche": "wrappers",
+    "vibe": "cozy",
+    "tiers": 5,
+    "name": "IndieBucket",
+    "tagline": "Tomorrow's unicorns, today's $49"
   }
 ]
