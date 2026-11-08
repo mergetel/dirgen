@@ -70,5 +70,14 @@
     "tiers": 5,
     "name": "IndieBucket",
     "tagline": "Tomorrow's unicorns, today's $49"
+  },
+  {
+    "date": "2026-11-08",
+    "seed": "6tcbx0",
+    "niche": "marketing",
+    "vibe": "brutalist",
+    "tiers": 3,
+    "name": "PromoHeap",
+    "tagline": "Backlinks for the people"
   }
 ]
