@@ -88,5 +88,14 @@
     "tiers": 3,
     "name": "UpvotePit",
     "tagline": "Discover tools before they discover pricing"
+  },
+  {
+    "date": "2026-11-10",
+    "seed": "69ga11",
+    "niche": "nocode",
+    "vibe": "hustle",
+    "tiers": 5,
+    "name": "WaitlistStash",
+    "tagline": "Hand-picked by an algorithm we wrote yesterday"
   }
 ]
