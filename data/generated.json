@@ -97,5 +97,14 @@
     "tiers": 5,
     "name": "WaitlistStash",
     "tagline": "Hand-picked by an algorithm we wrote yesterday"
+  },
+  {
+    "date": "2026-11-11",
+    "seed": "5zgoc2",
+    "niche": "nocode",
+    "vibe": "hustle",
+    "tiers": 4,
+    "name": "VibePit",
+    "tagline": "Your tool deserves to be listed somewhere"
   }
 ]
