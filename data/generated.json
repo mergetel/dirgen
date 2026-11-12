@@ -106,5 +106,14 @@
     "tiers": 4,
     "name": "VibePit",
     "tagline": "Your tool deserves to be listed somewhere"
+  },
+  {
+    "date": "2026-11-12",
+    "seed": "5ph2n3",
+    "niche": "marketing",
+    "vibe": "minimal",
+    "tiers": 2,
+    "name": "PivotDroppr",
+    "tagline": "Curated by vibes, sorted by checkout"
   }
 ]
