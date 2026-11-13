@@ -115,5 +115,14 @@
     "tiers": 2,
     "name": "PivotDroppr",
     "tagline": "Curated by vibes, sorted by checkout"
+  },
+  {
+    "date": "2026-11-13",
+    "seed": "5fhgy4",
+    "niche": "wrappers",
+    "vibe": "brutalist",
+    "tiers": 5,
+    "name": "LaunchScoutr",
+    "tagline": "Curated by vibes, sorted by checkout"
   }
 ]
