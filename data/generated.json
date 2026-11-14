@@ -124,5 +124,14 @@
     "tiers": 5,
     "name": "LaunchScoutr",
     "tagline": "Curated by vibes, sorted by checkout"
+  },
+  {
+    "date": "2026-11-14",
+    "seed": "55hv95",
+    "niche": "ai",
+    "vibe": "minimal",
+    "tiers": 3,
+    "name": "HypeStash",
+    "tagline": "Find tools. Submit tools. Mostly submit tools."
   }
 ]
