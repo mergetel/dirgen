@@ -133,5 +133,14 @@
     "tiers": 3,
     "name": "HypeStash",
     "tagline": "Find tools. Submit tools. Mostly submit tools."
+  },
+  {
+    "date": "2026-11-15",
+    "seed": "4vi9k6",
+    "niche": "ai",
+    "vibe": "minimal",
+    "tiers": 3,
+    "name": "Launchster",
+    "tagline": "Every tool, ranked by how much it paid"
   }
 ]
