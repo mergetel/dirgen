@@ -142,5 +142,14 @@
     "tiers": 3,
     "name": "Launchster",
     "tagline": "Every tool, ranked by how much it paid"
+  },
+  {
+    "date": "2026-11-16",
+    "seed": "4linv7",
+    "niche": "marketing",
+    "vibe": "minimal",
+    "tiers": 3,
+    "name": "SeedPit",
+    "tagline": "Built in a weekend. Listing since Sunday."
   }
 ]
