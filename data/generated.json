@@ -151,5 +151,14 @@
     "tiers": 3,
     "name": "SeedPit",
     "tagline": "Built in a weekend. Listing since Sunday."
+  },
+  {
+    "date": "2026-11-17",
+    "seed": "4bj268",
+    "niche": "nocode",
+    "vibe": "brutalist",
+    "tiers": 5,
+    "name": "Upvotepalooza",
+    "tagline": "Where tools go to be listed"
   }
 ]
