@@ -160,5 +160,14 @@
     "tiers": 5,
     "name": "Upvotepalooza",
     "tagline": "Where tools go to be listed"
+  },
+  {
+    "date": "2026-11-18",
+    "seed": "8hd3kt",
+    "niche": "marketing",
+    "vibe": "hustle",
+    "tiers": 5,
+    "name": "GrowthPad",
+    "tagline": "Launch here, then launch everywhere else"
   }
 ]
