@@ -169,5 +169,14 @@
     "tiers": 5,
     "name": "GrowthPad",
     "tagline": "Launch here, then launch everywhere else"
+  },
+  {
+    "date": "2026-11-19",
+    "seed": "87dhvu",
+    "niche": "marketing",
+    "vibe": "brutalist",
+    "tiers": 3,
+    "name": "Promoverse",
+    "tagline": "Where tools go to be listed"
   }
 ]
