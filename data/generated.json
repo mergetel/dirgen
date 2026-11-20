@@ -178,5 +178,14 @@
     "tiers": 3,
     "name": "Promoverse",
     "tagline": "Where tools go to be listed"
+  },
+  {
+    "date": "2026-11-20",
+    "seed": "17g26ha",
+    "niche": "wrappers",
+    "vibe": "cozy",
+    "tiers": 4,
+    "name": "FounderSpot",
+    "tagline": "Where tools go to be listed"
   }
 ]
