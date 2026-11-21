@@ -187,5 +187,14 @@
     "tiers": 4,
     "name": "FounderSpot",
     "tagline": "Where tools go to be listed"
+  },
+  {
+    "date": "2026-11-21",
+    "seed": "17q1s69",
+    "niche": "productivity",
+    "vibe": "brutalist",
+    "tiers": 4,
+    "name": "Hypely",
+    "tagline": "Discover tools before they discover pricing"
   }
 ]
