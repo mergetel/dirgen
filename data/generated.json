@@ -196,5 +196,14 @@
     "tiers": 4,
     "name": "Hypely",
     "tagline": "Discover tools before they discover pricing"
+  },
+  {
+    "date": "2026-11-22",
+    "seed": "16w2z3c",
+    "niche": "ai",
+    "vibe": "hustle",
+    "tiers": 2,
+    "name": "MakerHoard",
+    "tagline": "Find tools. Submit tools. Mostly submit tools."
   }
 ]
