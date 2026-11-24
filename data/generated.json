@@ -205,5 +205,14 @@
     "tiers": 2,
     "name": "MakerHoard",
     "tagline": "Find tools. Submit tools. Mostly submit tools."
+  },
+  {
+    "date": "2026-11-24",
+    "seed": "18k0l96",
+    "niche": "marketing",
+    "vibe": "cozy",
+    "tiers": 5,
+    "name": "HypeRankr",
+    "tagline": "Find tools. Submit tools. Mostly submit tools."
   }
 ]
