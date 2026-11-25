@@ -214,5 +214,14 @@
     "tiers": 5,
     "name": "HypeRankr",
     "tagline": "Find tools. Submit tools. Mostly submit tools."
+  },
+  {
+    "date": "2026-11-25",
+    "seed": "18u06y5",
+    "niche": "dev",
+    "vibe": "hustle",
+    "tiers": 2,
+    "name": "Submitium",
+    "tagline": "Curated by vibes, sorted by checkout"
   }
 ]
