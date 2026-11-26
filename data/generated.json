@@ -223,5 +223,14 @@
     "tiers": 2,
     "name": "Submitium",
     "tagline": "Curated by vibes, sorted by checkout"
+  },
+  {
+    "date": "2026-11-26",
+    "seed": "1801dv8",
+    "niche": "marketing",
+    "vibe": "minimal",
+    "tiers": 2,
+    "name": "BacklinkStash",
+    "tagline": "The only directory you need until the next one"
   }
 ]
