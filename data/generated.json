@@ -232,5 +232,14 @@
     "tiers": 2,
     "name": "BacklinkStash",
     "tagline": "The only directory you need until the next one"
+  },
+  {
+    "date": "2026-11-27",
+    "seed": "18a0zk7",
+    "niche": "marketing",
+    "vibe": "cozy",
+    "tiers": 2,
+    "name": "Pitchopia",
+    "tagline": "Built in a weekend. Listing since Sunday."
   }
 ]
